@@ -56,7 +56,7 @@ int main (int argc, char *argv[]) {
     size_t page_size = getpagesize();
     char buffer[page_size];
     memset(buffer, '\0', page_size);
-    int fd = open("memmap.txt", O_RDWR | O_CREAT | O_TRUNC, 0644);
+    int fd = open("memmap", O_RDWR | O_CREAT | O_TRUNC, 0644);
     if (fd == -1) {
         perror("open");
         exit(-1);
